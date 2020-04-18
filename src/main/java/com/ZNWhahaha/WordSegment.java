@@ -302,7 +302,7 @@ public class WordSegment {
         SequenceData data = loadPKUSegData();
         WordSegment hmm = new WordSegment();
         hmm.train(data);
-        List<String> testLines = readLines("/Users/znw_mac/IdeaProjects/ChineseWordSegment0.1/TextFiles/BallLighting", "utf-8");
+        List<String> testLines = readLines("/Users/znw_mac/IdeaProjects/ChineseWordSegment0.1/TextFiles/pku_test.utf8", "utf-8");
         for(String line : testLines) {
             String[] words = hmm.predictAndSplit(line);
             System.out.println(String.join("/", words));
