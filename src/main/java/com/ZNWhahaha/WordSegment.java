@@ -1,12 +1,7 @@
 package com.ZNWhahaha;
 
-import java.io.BufferedReader;
-import java.io.FileInputStream;
-import java.io.InputStreamReader;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.io.*;
+import java.util.*;
 
 /**
  * @ClassName : WordSegment
@@ -17,11 +12,11 @@ import java.util.Map;
 public class WordSegment {
 
     //初始状态概率向量
-    private double[] pi;
+    public double[] pi;
     //状态转移矩阵
-    private double[][] A;
+    public double[][] A;
     //发射概率矩阵
-    private double[][] B;
+    public double[][] B;
 
     //定义无穷小量
     public double infinity = (double) -Math.pow(2, 31);
@@ -297,16 +292,69 @@ public class WordSegment {
         return decode(tags, sen);
     }
 
+    /**
+     * @ClassName : WordSegment
+     * @Description : 外部调用接口
+     * @param
+
+     * @Return : void
+     * @Author : ZNWhahaha
+     * @Date : 2020/4/10
+    */
+    public List<String> run_Test(String line) throws IOException {
+        String[] words = this.predictAndSplit(line);
+        List<String> Words = Arrays.asList(words);
+        System.out.println(String.join("/", words));
+        return Words;
+    }
+
+    /**
+     * @ClassName : WordSegment
+     * @Description : 外部调用接口
+     * @param
+
+     * @Return : void
+     * @Author : ZNWhahaha
+     * @Date : 2020/4/10
+     */
+    public void run_Train(){
+        SequenceData data = loadPKUSegData();
+        this.train(data);
+    }
     
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
+
+        String filePath = "/Users/znw_mac/IdeaProjects/ChineseWordSegment0.1/TextFiles";
+        File dir = new File(filePath);
+        // 一、检查放置文件的文件夹路径是否存在，不存在则创建
+        if (!dir.exists()) {
+            dir.mkdirs();// mkdirs创建多级目录
+        }
+        File checkFile = new File(filePath + "/output.txt");
+        FileWriter writer = null;
+
+
+
         SequenceData data = loadPKUSegData();
         WordSegment hmm = new WordSegment();
         hmm.train(data);
-        List<String> testLines = readLines("/Users/znw_mac/IdeaProjects/ChineseWordSegment0.1/TextFiles/pku_test.utf8", "utf-8");
+        List<String> testLines = readLines("/Users/znw_mac/IdeaProjects/ChineseWordSegment0.1/TextFiles/test.txt", "utf-8");
         for(String line : testLines) {
+
             String[] words = hmm.predictAndSplit(line);
             System.out.println(String.join("/", words));
+
+            // 二、检查目标文件是否存在，不存在则创建
+            if (!checkFile.exists()) {
+                checkFile.createNewFile();// 创建目标文件
+            }
+
+            writer = new FileWriter(checkFile, true);
+            writer.append(String.join("/", words));
+            writer.flush();
+
         }
+        
     }
 
 }
