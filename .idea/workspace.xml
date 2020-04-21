@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="568168f8-dd64-459e-9fb2-baecd7950261" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ZNWhahaha/score.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ZNWhahaha/WordSeg.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ZNWhahaha/WordSegment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ZNWhahaha/WordSegment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ZNWhahaha/WordSegment$SequenceData.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ZNWhahaha/WordSegment$SequenceData.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ZNWhahaha/WordSegment.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ZNWhahaha/WordSegment.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ZNWhahaha/score.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ZNWhahaha/score.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -120,7 +117,8 @@
       <workItem from="1585641158971" duration="4000" />
       <workItem from="1586566601934" duration="5891000" />
       <workItem from="1586830952399" duration="6000" />
-      <workItem from="1587252875851" duration="8557000" />
+      <workItem from="1587252875851" duration="9937000" />
+      <workItem from="1587348139323" duration="772000" />
     </task>
     <servers />
   </component>
@@ -132,41 +130,12 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/ZNWhahaha/score.java</url>
-          <line>26</line>
-          <option name="timeStamp" value="35" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/ZNWhahaha/score.java</url>
-          <line>28</line>
-          <option name="timeStamp" value="36" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/ZNWhahaha/score.java</url>
-          <line>29</line>
-          <option name="timeStamp" value="37" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/ZNWhahaha/score.java</url>
-          <line>31</line>
-          <option name="timeStamp" value="38" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/ZNWhahaha/score.java</url>
-          <line>30</line>
-          <option name="timeStamp" value="39" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

@@ -16,7 +16,7 @@ public class score {
         int process_count = 0;
         WordSegment ws = new WordSegment();
         ws.run_Train();
-        for (String line : readLines("/Users/znw_mac/IdeaProjects/ChineseWordSegment0.1/TextFiles/test.txt", "utf-8")) {
+        for (String line : ws.readLines("/Users/znw_mac/IdeaProjects/ChineseWordSegment0.1/TextFiles/test.txt", "utf-8")) {
             process_count += 1;
             if (process_count % 1000 == 0)
                 System.out.println(process_count);
@@ -53,30 +53,5 @@ public class score {
 
 
 
-    /**
-     * @ClassName : score
-     * @Description : 按行读取文本
-     * @param path
-     * @param encoding
-     * @Return : java.util.List<java.lang.String>
-     * @Author : ZNWhahaha
-     * @Date : 2020/4/10
-    */
-    public static List<String> readLines(String path, String encoding){
-        if(encoding == null)
-            encoding = "utf-8";
-        List<String> re = new ArrayList<String>();
-        try {
-            InputStreamReader in = new InputStreamReader(new FileInputStream(path), encoding);
-            BufferedReader reader = new BufferedReader(in);
-
-            String line = null;
-            while((line = reader.readLine()) != null) {
-                re.add(line);
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        return re;
-    }
+    
 }

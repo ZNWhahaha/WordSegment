@@ -324,7 +324,7 @@ public class WordSegment {
     
     public static void main(String[] args) throws IOException {
 
-        String filePath = "/Users/znw_mac/IdeaProjects/ChineseWordSegment0.1/TextFiles";
+        String filePath = "/Users/znw_mac/IdeaProjects/ChineseWordSegment0.1/pku_test_utf8s";
         File dir = new File(filePath);
         // 一、检查放置文件的文件夹路径是否存在，不存在则创建
         if (!dir.exists()) {
